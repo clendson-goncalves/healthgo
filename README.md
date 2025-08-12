@@ -33,6 +33,10 @@ Ver documentação técnica em [ARCHITECTURE.md](./ARCHITECTURE.md)
 - Exportação de dados CSV
 - Toggle de dados sensíveis
 
+### Interfaces do Usuário
+<img width="963" height="760" alt="image" src="https://github.com/user-attachments/assets/79fd97d0-f4af-40f5-bc2a-a647adffd1ed" />
+<img width="933" height="707" alt="image" src="https://github.com/user-attachments/assets/28fa92be-4ab2-4822-9424-ea5f3ed20028" />
+<img width="824" height="827" alt="image" src="https://github.com/user-attachments/assets/b0881dbe-df6d-4116-ae0a-08d99da2d561" />
 
 ## Próximas implementações
 
