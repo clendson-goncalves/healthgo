@@ -32,11 +32,11 @@ export async function GET(request: NextRequest) {
 
       headers.forEach((header, index) => {
         const cleanHeader = header.trim()
-        let value = values[index]?.trim() || ""
+        let value: string | number = values[index]?.trim() || ""
 
         // Numeric conversion
         if (["hr", "pressao_sys", "pressao_dia", "resp_freq"].includes(cleanHeader)) {
-          value = Number.parseFloat(value) || 0
+          value = Number.parseFloat(value as string) || 0
         }
 
         record[cleanHeader] = value

@@ -1,6 +1,6 @@
 "use client"
 
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, TooltipProps, ResponsiveContainer, Legend } from "recharts"
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts"
 
 import { VitalSigns, PatientVitalChartProps } from "@/types/vital-signs"
 
@@ -56,7 +56,14 @@ export function PatientVitalChart({ data }: PatientVitalChartProps) {
     temp: Number.parseFloat(item.temp),
   }))
 
-  const CustomTooltip = ({ active, payload, label }: TooltipProps<any, any>) => {
+  interface CustomTooltipProps {
+    active?: boolean;
+    payload?: any[];
+    label?: string | number;
+  }
+
+
+  const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
     if (active && payload && payload.length) {
       const reversedPayload = [...payload].reverse();
 

@@ -1,4 +1,4 @@
-import { type NextRequest, NextResponse } from "next/server"
+import { NextResponse } from "next/server"
 import { readFileSync } from "fs"
 import { join } from "path"
 import { PATIENT_MOCK_DATA } from "@/data/patients"
@@ -158,16 +158,15 @@ export async function GET() {
   }
 }
 
-export async function POST(request: NextRequest) {
+export async function POST() {
   try {
-    const data = await request.json()
 
     return NextResponse.json({
       success: true,
       message: "Received data successfully",
       timestamp: new Date().toISOString(),
     })
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       {
         success: false,
